@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "PutRequest": {
+        "Item": {
+          "taskListId": {
+            "S": "1"
+          },
+          "taskId": {
+            "S": "1"
+          },
+          "content": {
+            "S": "First Task"
+          },
+          "status": {
+            "S": "doing"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "taskListId": {
+            "S": "2"
+          },
+          "taskId": {
+            "S": "2"
+          },
+          "content": {
+            "S": "Second Task"
+          },
+          "status": {
+            "S": "waiting"
+          }
+        }
+      }
+    }
+  ]
+}
