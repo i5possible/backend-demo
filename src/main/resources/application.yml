@@ -1,7 +1,7 @@
 amazon:
   access:
-    key: ${aws-key}
-    secret-key: ${aws-secret-key}
+    key: ${aws-key:dummy}
+    secret-key: ${aws-secret-key:dummy}
   region: ap-northeast-1
   end-point:
     url: localhost:8000

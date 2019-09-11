@@ -27,4 +27,9 @@ public class TaskService {
     public Task getTask(String taskListId, String taskId) {
         return taskRepository.get(taskListId, taskId);
     }
+
+    public Task createTask(String taskListId, Task task) {
+        taskRepository.add(task);
+        return null;
+    }
 }

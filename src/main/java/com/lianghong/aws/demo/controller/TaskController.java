@@ -1,11 +1,11 @@
 package com.lianghong.aws.demo.controller;
 
 import com.lianghong.aws.demo.domain.Task;
+import com.lianghong.aws.demo.presenter.TaskPresenter;
 import com.lianghong.aws.demo.service.TaskService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import static com.lianghong.aws.demo.presenter.TaskMapper.MAPPER;
 
 /**
  * @author lianghong
@@ -23,7 +23,12 @@ public class TaskController {
     }
 
     @GetMapping("{taskListId}/task/{taskId}")
-    public Task getTask(@PathVariable String taskListId, @PathVariable String taskId) {
-        return taskService.getTask(taskListId, taskId);
+    public TaskPresenter getTask(@PathVariable String taskListId, @PathVariable String taskId) {
+        return MAPPER.mapToPresenter(taskService.getTask(taskListId, taskId));
+    }
+
+    @PostMapping("{taskListId}/task")
+    public Task createTask(@PathVariable String taskListId, @RequestBody Task task) {
+        return taskService.createTask(taskListId, task);
     }
 }
