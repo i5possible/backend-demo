@@ -1,0 +1,83 @@
+{
+  "general": [
+    {
+      "PutRequest": {
+        "Item": {
+          "PK": {
+            "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
+          },
+          "SK": {
+            "S": "metadata"
+          },
+          "data": {
+            "S": "First Application"
+          },
+          "LVR": {
+            "N": "70"
+          },
+          "status": {
+            "S": "Submitted"
+          },
+          "lastUpdated": {
+            "S": "2019-09-11T15:51:34.269Z"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "PK": {
+            "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
+          },
+          "SK": {
+            "S": "submitted-2019-09-11T15:51:34.269Z"
+          },
+          "data": {
+            "S": "Some One"
+          },
+          "Writer": {
+            "S": "Another One"
+          }
+        }
+      }
+    },{
+      "PutRequest": {
+        "Item": {
+          "PK": {
+            "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
+          },
+          "SK": {
+            "S": "lender-a49b3bda-69ba-4d46-952e-c9a6c0806165"
+          },
+          "data": {
+            "S": "China Merchants Bank"
+          },
+          "portalLink": {
+            "S": "www.baidu.com"
+          }
+        }
+      }
+    },{
+      "PutRequest": {
+        "Item": {
+          "PK": {
+            "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
+          },
+          "SK": {
+            "S": "loans-11a6504a-34b0-4326-a189-117969118c3b"
+          },
+          "data": {
+            "S": "Some Awesome loan"
+          },
+          "amount": {
+            "N": "4000000"
+          },
+          "rate": {
+            "N": "4.90"
+          }
+        }
+      }
+    }
+  ]
+}
