@@ -2,9 +2,12 @@ package com.lianghong.aws.demo.service;
 
 import com.lianghong.aws.demo.domain.Task;
 import com.lianghong.aws.demo.repository.TaskRepository;
+import com.lianghong.aws.demo.repository.entity.TaskEntityMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import static com.lianghong.aws.demo.repository.entity.TaskEntityMapper.MAPPER;
 
 /**
  * @author lianghong
@@ -25,11 +28,11 @@ public class TaskService {
     }
 
     public Task getTask(String taskListId, String taskId) {
-        return taskRepository.get(taskListId, taskId);
+        return MAPPER.mapToDomain(taskRepository.get(taskListId, taskId));
     }
 
     public Task createTask(String taskListId, Task task) {
-        taskRepository.add(task);
+        taskRepository.add(MAPPER.mapToEntity(task));
         return null;
     }
 }

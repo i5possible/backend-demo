@@ -5,7 +5,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBSaveExpression;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
 import com.amazonaws.services.dynamodbv2.model.ExpectedAttributeValue;
-import com.lianghong.aws.demo.domain.Task;
+import com.lianghong.aws.demo.repository.entity.TaskEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -25,26 +25,26 @@ public class TaskRepository {
     @Autowired
     private DynamoDBMapper mapper;
 
-    public void add(Task task) {
+    public void add(TaskEntity task) {
         mapper.save(task);
     }
 
-    public Task get(String taskListId) {
-        return mapper.load(Task.class, taskListId);
+    public TaskEntity get(String taskListId) {
+        return mapper.load(TaskEntity.class, taskListId);
     }
 
-    public Task get(String taskListId, String taskId) {
-        return mapper.load(Task.class, taskListId, taskId);
+    public TaskEntity get(String taskListId, String taskId) {
+        return mapper.load(TaskEntity.class, taskListId, taskId);
     }
-    public void updateStudentDetails(Task task) {
+    public void updateStudentDetails(TaskEntity task) {
         mapper.save(task, buildDynamoDBSaveExpression(task));
     }
 
-    public void deleteStudentDetails(Task task) {
+    public void deleteStudentDetails(TaskEntity task) {
         mapper.delete(task);
     }
 
-    public DynamoDBSaveExpression buildDynamoDBSaveExpression(Task task) {
+    public DynamoDBSaveExpression buildDynamoDBSaveExpression(TaskEntity task) {
         DynamoDBSaveExpression saveExpression = new DynamoDBSaveExpression();
         Map<String, ExpectedAttributeValue> expected = new HashMap<>();
         expected.put("taskId", new ExpectedAttributeValue(new AttributeValue(task.getTaskId()))

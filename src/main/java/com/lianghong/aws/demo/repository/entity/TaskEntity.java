@@ -1,4 +1,4 @@
-package com.lianghong.aws.demo.domain;
+package com.lianghong.aws.demo.repository.entity;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
@@ -13,14 +13,15 @@ import org.joda.time.DateTime;
 
 /**
  * @author lianghong
- * @date 2019/9/10
+ * @date 2019/9/15
  */
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Task {
+@DynamoDBTable(tableName = "tasks")
+public class TaskEntity {
     @DynamoDBHashKey
     private String taskListId;
     @DynamoDBRangeKey
