@@ -12,19 +12,14 @@ import java.math.BigDecimal;
  * @author lianghong
  * @date 2019/9/15
  */
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Application {
-    private String pk;
-    private String sk;
-    private String data;
+public class ApplicationAbstract {
+    private String applicationId;
+    private String type;
+    private String name;
     private BigDecimal lvr;
     private DateTime lastUpdated;
-    private BigDecimal amount;
-    private String portalLink;
-    private BigDecimal rate;
-    private String writer;
 }

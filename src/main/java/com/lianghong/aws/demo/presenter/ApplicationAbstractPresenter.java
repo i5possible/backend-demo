@@ -13,16 +13,12 @@ import static com.lianghong.aws.demo.utils.DateTimeUtils.convertToString;
  */
 
 @Data
-public class ApplicationPresenter {
-    private String pk;
-    private String sk;
-    private String data;
+public class ApplicationAbstractPresenter {
+    private String applicationId;
+    private String type;
+    private String name;
     private BigDecimal lvr;
     private DateTime lastUpdated;
-    private BigDecimal amount;
-    private String portalLink;
-    private BigDecimal rate;
-    private String writer;
 
     public String getLastUpdated() {
         return convertToString(lastUpdated);

@@ -30,18 +30,26 @@ public class ApplicationEntity {
     @DynamoDBTypeConverted(converter = ApplicationIdConverter.class)
     @DynamoDBAttribute(attributeName = "PK")
     @DynamoDBHashKey
-    private String applicationId;
+    private String pk;
 
     @DynamoDBAttribute(attributeName = "SK")
     @DynamoDBRangeKey
-    private String type;
+    private String sk;
 
     @DynamoDBAttribute(attributeName = "LVR")
     private BigDecimal lvr;
 
     @DynamoDBAttribute(attributeName = "data")
-    private String name;
+    private String data;
 
     @DynamoDBTypeConverted(converter = DateTimeConverter.class)
     private DateTime lastUpdated;
+
+    private BigDecimal amount;
+
+    private String portalLink;
+
+    private BigDecimal rate;
+
+    private String writer;
 }

@@ -16,7 +16,7 @@
             "N": "70"
           },
           "lastUpdated": {
-            "S": "2019-09-11T15:51:34.269Z"
+            "S": "2019-09-11T15:51:34Z"
           }
         }
       }
@@ -28,7 +28,7 @@
             "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
           },
           "SK": {
-            "S": "submitted-2019-09-11T15:51:34.269Z"
+            "S": "status-submitted-2019-09-11T15:51:34Z"
           },
           "data": {
             "S": "Some One"
@@ -60,12 +60,13 @@
         "Item": {
           "PK": {
             "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
+
           },
           "SK": {
             "S": "loans-11a6504a-34b0-4326-a189-117969118c3b"
           },
           "data": {
-            "S": "Some Awesome loan"
+            "S": "Some Awesome Loan"
           },
           "amount": {
             "N": "4000000"
@@ -74,7 +75,27 @@
             "N": "4.90"
           }
         }
+      }, "PutRequest": {
+        "Item": {
+          "PK": {
+            "S": "application-4b2f4445-7ddf-437f-a662-aaace38ee96e"
+
+          },
+          "SK": {
+            "S": "loans-d16fffb8-c2bf-4b4d-b0dc-f899a579ddce"
+          },
+          "data": {
+            "S": "Some Small Loan"
+          },
+          "amount": {
+            "N": "330000"
+          },
+          "rate": {
+            "N": "3.90"
+          }
+        }
       }
+
     }
   ]
 }

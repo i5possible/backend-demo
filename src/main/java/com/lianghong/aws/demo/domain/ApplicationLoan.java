@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
 
@@ -17,14 +16,10 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Application {
-    private String pk;
-    private String sk;
-    private String data;
-    private BigDecimal lvr;
-    private DateTime lastUpdated;
+public class ApplicationLoan {
+    private String applicationId;
+    private String type;
+    private String name;
     private BigDecimal amount;
-    private String portalLink;
     private BigDecimal rate;
-    private String writer;
 }
