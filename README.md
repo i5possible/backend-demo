@@ -21,3 +21,15 @@ Sample task api.
 - Composite key
 - GSI reload
 - Hierarchical data
+
+## Spring-boot-actuator
+
+Dependency:
+```
+implementation 'org.springframework.boot:spring-boot-starter-actuator'
+```
+
+Visit:
+```
+GET /actuator
+```

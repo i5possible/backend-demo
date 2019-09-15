@@ -44,6 +44,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-undertow'
 	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.627'
 	implementation 'com.amazonaws:aws-java-sdk-core:1.11.627'
 	implementation 'com.amazonaws:aws-java-sdk-s3:1.11.627'
