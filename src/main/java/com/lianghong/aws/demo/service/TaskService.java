@@ -2,12 +2,11 @@ package com.lianghong.aws.demo.service;
 
 import com.lianghong.aws.demo.domain.Task;
 import com.lianghong.aws.demo.repository.TaskRepository;
-import com.lianghong.aws.demo.repository.entity.TaskEntityMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.lianghong.aws.demo.repository.entity.TaskEntityMapper.MAPPER;
+import static com.lianghong.aws.demo.repository.mapper.TaskEntityMapper.MAPPER;
 
 /**
  * @author lianghong

@@ -1,4 +1,4 @@
-package com.lianghong.aws.demo.repository;
+package com.lianghong.aws.demo.repository.converter;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverter;
 import org.joda.time.DateTime;

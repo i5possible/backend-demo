@@ -1,8 +1,7 @@
-package com.lianghong.aws.demo.repository.entity;
+package com.lianghong.aws.demo.repository.mapper;
 
 import com.lianghong.aws.demo.domain.Task;
-import com.lianghong.aws.demo.presenter.TaskMapper;
-import com.lianghong.aws.demo.presenter.TaskPresenter;
+import com.lianghong.aws.demo.repository.entity.TaskEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

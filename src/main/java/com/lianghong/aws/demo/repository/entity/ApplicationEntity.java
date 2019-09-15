@@ -1,15 +1,19 @@
 package com.lianghong.aws.demo.repository.entity;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
+import com.lianghong.aws.demo.repository.converter.ApplicationIdConverter;
 import com.lianghong.aws.demo.repository.converter.DateTimeConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.joda.time.DateTime;
+
+import java.math.BigDecimal;
 
 /**
  * @author lianghong
@@ -20,14 +24,24 @@ import org.joda.time.DateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@DynamoDBTable(tableName = "tasks")
-public class TaskEntity {
+@DynamoDBTable(tableName = "general")
+public class ApplicationEntity {
+
+    @DynamoDBTypeConverted(converter = ApplicationIdConverter.class)
+    @DynamoDBAttribute(attributeName = "PK")
     @DynamoDBHashKey
-    private String taskListId;
+    private String applicationId;
+
+    @DynamoDBAttribute(attributeName = "SK")
     @DynamoDBRangeKey
-    private String taskId;
-    private String content;
-    private String status;
+    private String type;
+
+    @DynamoDBAttribute(attributeName = "LVR")
+    private BigDecimal lvr;
+
+    @DynamoDBAttribute(attributeName = "data")
+    private String name;
+
     @DynamoDBTypeConverted(converter = DateTimeConverter.class)
-    private DateTime dueDate;
+    private DateTime lastUpdated;
 }

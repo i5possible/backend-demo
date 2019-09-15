@@ -2,9 +2,8 @@ package com.lianghong.aws.demo.domain;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
-import com.lianghong.aws.demo.repository.DateTimeConverter;
+import com.lianghong.aws.demo.repository.converter.DateTimeConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,12 +20,9 @@ import org.joda.time.DateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Task {
-    @DynamoDBHashKey
     private String taskListId;
-    @DynamoDBRangeKey
     private String taskId;
     private String content;
     private String status;
-    @DynamoDBTypeConverted(converter = DateTimeConverter.class)
     private DateTime dueDate;
 }
