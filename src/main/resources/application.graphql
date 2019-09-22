@@ -1,0 +1,14 @@
+type Query {
+    application: ApplicationDetailsPresenter
+}
+
+type ApplicationDetailsPresenter {
+    applicationAbstract: ApplicationAbstract
+}
+
+type ApplicationAbstract {
+    applicationId: String
+    lvr: Number
+    name: String
+    type: String
+}
