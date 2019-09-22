@@ -7,6 +7,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
 import com.lianghong.aws.demo.repository.converter.ApplicationIdConverter;
 import com.lianghong.aws.demo.repository.converter.DateTimeConverter;
+import com.lianghong.aws.demo.repository.converter.SkPrefix;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -35,6 +36,10 @@ public class ApplicationEntity {
     @DynamoDBAttribute(attributeName = "SK")
     @DynamoDBRangeKey
     private String sk;
+
+    @DynamoDBAttribute(attributeName = "SK")
+    @DynamoDBTypeConverted(converter = SkPrefix.class)
+    private String skPrefix;
 
     @DynamoDBAttribute(attributeName = "LVR")
     private BigDecimal lvr;

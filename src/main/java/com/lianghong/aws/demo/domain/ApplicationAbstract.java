@@ -17,6 +17,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ApplicationAbstract {
+
+    public static final String prefix = "metadata";
+
     private String applicationId;
     private String type;
     private String name;

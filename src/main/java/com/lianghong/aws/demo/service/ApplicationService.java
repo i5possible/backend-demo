@@ -1,8 +1,8 @@
 package com.lianghong.aws.demo.service;
 
-import com.lianghong.aws.demo.domain.ApplicationDetails;
 import com.lianghong.aws.demo.domain.Application;
 import com.lianghong.aws.demo.domain.ApplicationAbstract;
+import com.lianghong.aws.demo.domain.ApplicationDetails;
 import com.lianghong.aws.demo.domain.ApplicationLender;
 import com.lianghong.aws.demo.domain.ApplicationLoan;
 import com.lianghong.aws.demo.domain.ApplicationStatus;
