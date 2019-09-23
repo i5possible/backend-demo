@@ -22,6 +22,10 @@ Sample task api.
 - GSI reload
 - Hierarchical data
 
+## Graphql
+- implementation 'com.graphql-java-kickstart:graphql-java-tools:5.2.4'
+- implementation 'com.graphql-java-kickstart:graphql-java-servlet:7.0.0'
+
 ## Spring-boot-actuator
 
 Dependency:
